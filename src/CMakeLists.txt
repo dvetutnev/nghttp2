@@ -247,6 +247,8 @@ if(ENABLE_ASIO_LIB)
   )
   target_include_directories(nghttp2_asio PRIVATE
     ${OPENSSL_INCLUDE_DIRS}
+  )
+  target_include_directories(nghttp2_asio PUBLIC
     ${Boost_INCLUDE_DIRS}
   )
   target_include_directories(nghttp2_asio INTERFACE
