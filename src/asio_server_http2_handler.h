@@ -34,6 +34,7 @@
 #include <boost/array.hpp>
 
 #include <nghttp2/asio_http2_server.h>
+#include <nghttp2/nghttp2.h>
 
 namespace nghttp2 {
 namespace asio_http2 {

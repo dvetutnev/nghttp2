@@ -36,7 +36,7 @@
 #include <boost/asio.hpp>
 #include <boost/asio/ssl.hpp>
 
-#include <nghttp2/nghttp2.h>
+#include <nghttp2/nghttp2_common.h>
 
 namespace nghttp2 {
 
@@ -89,7 +89,7 @@ typedef std::function<void(uint32_t)> close_cb;
 // are not available right now, return NGHTTP2_ERR_DEFERRED.  In case
 // of the error and request/response must be closed, return
 // NGHTTP2_ERR_TEMPORAL_CALLBACK_FAILURE.
-typedef std::function<ssize_t(uint8_t *buf, std::size_t len,
+typedef std::function<int(uint8_t *buf, std::size_t len,
                               uint32_t *data_flags)>
     generator_cb;
 

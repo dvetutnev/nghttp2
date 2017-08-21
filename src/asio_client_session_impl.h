@@ -30,6 +30,7 @@
 #include <boost/array.hpp>
 
 #include <nghttp2/asio_http2_client.h>
+#include <nghttp2/nghttp2.h>
 
 #include "template.h"
 
