@@ -1,6 +1,9 @@
 nghttp2 - HTTP/2 C Library
 ==========================
 
+.. image:: https://travis-ci.org/dvetutnev/nghttp2.svg?branch=master
+    :target: https://travis-ci.org/dvetutnev/nghttp2
+
 This is an implementation of the Hypertext Transfer Protocol version 2
 in C.
 
