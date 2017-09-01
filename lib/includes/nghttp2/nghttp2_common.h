@@ -320,6 +320,35 @@ typedef struct {
   uint8_t exclusive;
 } nghttp2_priority_spec;
 
+/**
+ * @enum
+ *
+ * The flags used to set in |data_flags| output parameter in
+ * :type:`nghttp2_data_source_read_callback`.
+ */
+typedef enum {
+  /**
+   * No flag set.
+   */
+  NGHTTP2_DATA_FLAG_NONE = 0,
+  /**
+   * Indicates EOF was sensed.
+   */
+  NGHTTP2_DATA_FLAG_EOF = 0x01,
+  /**
+   * Indicates that END_STREAM flag must not be set even if
+   * NGHTTP2_DATA_FLAG_EOF is set.  Usually this flag is used to send
+   * trailer fields with `nghttp2_submit_request()` or
+   * `nghttp2_submit_response()`.
+   */
+  NGHTTP2_DATA_FLAG_NO_END_STREAM = 0x02,
+  /**
+   * Indicates that application will send complete DATA frame in
+   * :type:`nghttp2_send_data_callback`.
+   */
+  NGHTTP2_DATA_FLAG_NO_COPY = 0x04
+} nghttp2_data_flag;
+
 #ifdef __cplusplus
 }
 #endif

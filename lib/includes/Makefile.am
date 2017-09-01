@@ -23,4 +23,4 @@
 
 EXTRA_DIST = CMakeLists.txt
 
-nobase_include_HEADERS = nghttp2/nghttp2.h nghttp2/nghttp2ver.h
+nobase_include_HEADERS = nghttp2/nghttp2.h nghttp2/nghttp2ver.h nghttp2/nghttp2_common.h
