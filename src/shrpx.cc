@@ -1667,7 +1667,7 @@ Connections:
               "/", it  performs exact match against  the request path.
               If  host  is given,  it  performs  a match  against  the
               request host.   For a  request received on  the frontend
-              lister  with "sni-fwd"  parameter enabled,  SNI host  is
+              listener with  "sni-fwd" parameter enabled, SNI  host is
               used instead of a request host.  If host alone is given,
               "/" is  appended to it,  so that it matches  all request
               paths  under the  host  (e.g., specifying  "nghttp2.org"
@@ -2482,6 +2482,10 @@ Logging:
                 the response.   For HTTP/1,  ALPN is  always http/1.1,
                 regardless of minor version.
               * $tls_cipher: cipher used for SSL/TLS connection.
+              * $tls_client_fingerprint: SHA-256 fingerprint of client
+                certificate.
+              * $tls_client_subject_name:   subject  name   in  client
+                certificate.
               * $tls_protocol: protocol for SSL/TLS connection.
               * $tls_session_id: session ID for SSL/TLS connection.
               * $tls_session_reused:  "r"   if  SSL/TLS   session  was

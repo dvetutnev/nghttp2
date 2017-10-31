@@ -28,11 +28,15 @@
 #include "nghttp2_config.h"
 
 #include <limits.h>
-#ifdef WIN32
-#include <io.h>
-#else
+#ifdef _WIN32
+/* Structure for scatter/gather I/O.  */
+struct iovec {
+  void *iov_base; /* Pointer to data.  */
+  size_t iov_len; /* Length of data.  */
+};
+#else // !_WIN32
 #include <sys/uio.h>
-#endif // WIN32
+#endif // !_WIN32
 
 #include <cassert>
 #include <cstring>
